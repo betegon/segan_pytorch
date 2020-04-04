@@ -1,5 +1,16 @@
 # Speech Enhancement Generative Adversarial Network in PyTorch
 
+## UPDATE THIS REPO FROM THE ORIGINAL
+This repo was forked from https://github.com/santi-pdp/segan_pytorch (MIT LICENSE), and know it is private and applied to the development of a speech enhancement web app.
+Check this medium article: https://medium.com/@bilalbayasut/github-how-to-make-a-fork-of-public-repository-private-6ee8cacaf9d3  on How to handle a private repo from a public one.
+As detailed there, FOR UPDATING NEW COMMITS FROM ORIGINAL REPO INTO THIS ONE:
+
+```bash
+git remote add public https://github.com/santi-pdp/segan_pytorch.git
+git pull public master # Creates a merge commit
+git push origin master
+```
+
 ### Requirements
 
 ```bash
