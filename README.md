@@ -40,12 +40,16 @@ The voicing/dewhispering audio samples can be found in the [whispersegan samples
 
 ### Pretrained Models
 
-SEGAN+ generator weights are released and can be downloaded in [this link](http://veu.talp.cat/seganp/release_weights/segan+_generator.ckpt). Make sure you place this file into the `ckpt_segan+` directory to make it work with the proper `train.opts` config file within that folder. The script `run_segan+_clean.sh` will properly read the ckpt in that directory as it is configured to be used with this referenced file.
+SEGAN+ generator weights are released and can be downloaded in [this link](http://veu.talp.cat/seganp/release_weights/segan+_generator.ckpt). Make sure you place this file into the `ckpt_segan+/` directory to make it work with the proper `train.opts` config file within that folder. The script `run_segan+_clean.sh` will properly read the ckpt in that directory as it is configured to be used with this referenced file.
+
+So the weights name when downloading them is  `segan+_generator.ckpt`, and and its path should be `ckpt_segan+/segan+_generator.ckpt`. Also, in  that same path, it should be the file `train.opts`, which is located in this repository.
+
+
 
 ### Introduction to scripts
 
 Two models are ready to train and use to make wav2wav speech enhancement conversions. SEGAN+ is an
-improved version of SEGAN [1], denoising utterances with its generator network (G). 
+improved version of SEGAN [1], denoising utterances with its generator network (G).
 
 ![SEGAN+_G](assets/segan+.png)
 
@@ -96,4 +100,3 @@ There is a WSEGAN, which stands for the dewhispering SEGAN [3]. This system is a
 * If using this code, parts of it, or developments from it, please cite the above reference.
 * We do not provide any support or assistance for the supplied code nor we offer any other compilation/variant of it.
 * We assume no responsibility regarding the provided code.
-
