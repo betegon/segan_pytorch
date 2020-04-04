@@ -53,7 +53,7 @@ improved version of SEGAN [1], denoising utterances with its generator network (
 
 ![SEGAN+_G](assets/segan+.png)
 
-To train this model, the following command should be ran:
+To train this model, the following command should be run:
 
 ```
 python train.py --save_path ckpt_segan+ --batch_size 300 \
