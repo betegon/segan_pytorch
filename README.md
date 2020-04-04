@@ -2,11 +2,25 @@
 
 ### Requirements
 
+```bash
+sudo apt-get install ffmpeg
 ```
+
+
+Note that some versions of the packages have been removed, as there were errors with the versions here stated. (`pillow` requirement has been included by me, @betegon, as pillow 7.0 gives errors, reference: https://github.com/python-pillow/Pillow/issues/4130)
+
+if problems, remove versions of: numba, numpy, matplotlib and pyfftw.
+
+If it keeps throwing errors, just go one package by one, _e.g.,_ `pip install numpy`, `pip install torch==0.4.1.post2` **NOTE:** It is important to first install numpy and then pytorch if going one by one, if not, pytorch will be installed without numpy, and you will have to install numpy and then reinstall torch.
+
+**NOTE:** `fleep` is just for determine audio extension (just for analytics purposes). This way, we can know what type of audio (wav, mp3, flac) are users uploading the most.
+```
+pillow==6.1
 SoundFile==0.10.2
 scipy==1.1.0
 librosa==0.6.1
 h5py==2.8.0
+git+https://github.com/santi-pdp/ahoproc_tools.git
 numba==0.38.0
 torch==0.4.1
 matplotlib==2.2.2
@@ -14,8 +28,9 @@ numpy==1.14.3
 pyfftw==0.10.4
 tensorboardX==1.4
 torchvision==0.2.1
+fleep
 ```
-Ahoprocessing tools (`ahoproc_tools`) is also needed, and the public repo is found [here](git@github.com:santi-pdp/ahoproc_tools.git).
+Ahoprocessing tools (`ahoproc_tools`) is also needed, and the public repo is found [here](git@github.com:santi-pdp/ahoproc_tools.git). If there is problems with ahoproc_tools, just clone the repo: https://github.com/santi-pdp/ahoproc_tools inside this repo root folder and run `python setup.py install` inside `ahoproc_tools` directory. To check it is well installed just run `python` and `import ahoproc_tools`, there should'nt be any error.
 
 ### Audio Samples
 
